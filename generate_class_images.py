@@ -22,7 +22,7 @@ model_id = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionPipeline.from_pretrained(model_id, torch_dtype=torch.float16).to(device)
 
 class_prompt = "a photo of Yorkie"
-num_imgs_to_generate = 100
+num_imgs_to_generate = 300
 
 with torch.no_grad():
     for i in tqdm(range(num_imgs_to_generate)):
